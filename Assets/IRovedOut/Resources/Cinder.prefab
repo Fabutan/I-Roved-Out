@@ -2429,13 +2429,13 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 742530327
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 43058419636346498, guid: 7f4da5a9578cbb24a8a579ef3b799630, type: 2}
   m_Bones:
   - {fileID: 4457461102674414}
   - {fileID: 4360529571975770}
@@ -2483,13 +2483,13 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 742530327
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: -1
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 43757490079609528, guid: 2bc3d7b134116d0479cc59ec5a7b6fa9, type: 2}
   m_Bones:
   - {fileID: 4848209447983016}
   - {fileID: 4866981989064374}
@@ -2531,13 +2531,13 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 742530327
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: -2
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 43860608096734348, guid: d93e6ab4a4ff32f4d95865443a61b25c, type: 2}
   m_Bones:
   - {fileID: 4033684096555174}
   - {fileID: 4847592048141722}
@@ -2578,13 +2578,13 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 742530327
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 2
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 43900553757354204, guid: f2eb2f49e732c294f8bd5bd3861ee3b8, type: 2}
   m_Bones:
   - {fileID: 4944973778766796}
   - {fileID: 4676821792613232}
@@ -2625,13 +2625,13 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 742530327
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 43040178901255530, guid: b3294e5ee9008bc46ab07ca3452a61ca, type: 2}
   m_Bones:
   - {fileID: 4485706318034022}
   - {fileID: 4881381842439302}
@@ -2672,13 +2672,13 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 742530327
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 43531227854549942, guid: e58a51753c555474ea756786df514b21, type: 2}
   m_Bones:
   - {fileID: 4569751514726606}
   - {fileID: 4132835078772582}
