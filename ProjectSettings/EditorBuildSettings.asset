@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/IRovedOut/GameScenes/SceneTest.unity
+    guid: 9f64fbdcbdf694e64b5a9fa5be382f38

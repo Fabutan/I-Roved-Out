@@ -26,7 +26,7 @@ MonoBehaviour:
   player: {fileID: 114691504442869042, guid: b70bce7d408efc84da5a677b49288fd9, type: 2}
   players: []
   shareInventory: 0
-  movementMethod: 1
+  movementMethod: 0
   inputMethod: 0
   interactionMethod: 0
   selectInteractions: 0
