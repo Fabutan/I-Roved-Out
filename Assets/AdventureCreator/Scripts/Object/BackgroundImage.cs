@@ -25,7 +25,7 @@ namespace AC
 	public class BackgroundImage : MonoBehaviour
 	{
 
-		#if UNITY_WEBGL
+		#if UNITY_WEBGL || UNITY_PS4
 		#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8
 		#elif UNITY_5 || UNITY_2017_1_OR_NEWER || UNITY_PRO_LICENSE
 		/** If True, then any MovieTexture set as the background will be looped */
@@ -74,7 +74,7 @@ namespace AC
 				ACDebug.LogWarning (this.name + " has no GUITexture component");
 			}
 
-			#if UNITY_WEBGL
+			#if UNITY_WEBGL || UNITY_PS4
 			#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_TVOS
 			#elif UNITY_5 || UNITY_2017_1_OR_NEWER || UNITY_PRO_LICENSE			
 			if (GetComponent <GUITexture>().texture != null && GetComponent <GUITexture>().texture is MovieTexture)

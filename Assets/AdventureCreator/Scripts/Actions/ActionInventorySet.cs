@@ -39,6 +39,8 @@ namespace AC
 		public bool setPlayer = false;
 		public int playerID;
 
+		public bool addToFront = false;
+
 		#if UNITY_EDITOR
 		private InventoryManager inventoryManager;
 		private SettingsManager settingsManager;
@@ -79,7 +81,7 @@ namespace AC
 
 				if (invAction == InvAction.Add)
 				{
-					KickStarter.runtimeInventory.Add (invID, amount, false, _playerID);
+					KickStarter.runtimeInventory.Add (invID, amount, false, _playerID, addToFront);
 				}
 				else if (invAction == InvAction.Remove)
 				{
@@ -204,6 +206,10 @@ namespace AC
 							replaceInvNumber = EditorGUILayout.Popup ("Item to remove:", replaceInvNumber, labelList.ToArray());
 							invIDReplace = inventoryManager.items[replaceInvNumber].id;
 						}
+					}
+					else if (invAction == InvAction.Add)
+					{
+						addToFront = EditorGUILayout.Toggle ("Add to front?", addToFront);
 					}
 				}
 				else

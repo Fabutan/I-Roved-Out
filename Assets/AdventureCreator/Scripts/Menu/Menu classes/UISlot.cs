@@ -93,9 +93,17 @@ namespace AC
 		/**
 		 * Links the UI GameObjects to the class, based on the supplied uiButtonID.
 		 */
-		public void LinkUIElements ()
+		public void LinkUIElements (Canvas canvas)
 		{
-			uiButton = Serializer.returnComponent <UnityEngine.UI.Button> (uiButtonID);
+			if (canvas != null)
+			{
+				uiButton = Serializer.GetGameObjectComponent <UnityEngine.UI.Button> (uiButtonID, canvas.gameObject);
+			}
+			else
+			{
+				uiButton = null;
+			}
+
 			if (uiButton)
 			{
 				if (uiButton.GetComponentInChildren <Text>())

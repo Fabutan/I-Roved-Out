@@ -127,43 +127,47 @@ namespace AC
 
 		private void OnTriggerStay (Collider other)
 		{
-			if (other.GetComponent <Hotspot>() && IsLayerCorrect (other.gameObject.layer, true))
+			Hotspot otherHotspot = other.GetComponent <Hotspot>();
+			if (otherHotspot != null && IsLayerCorrect (other.gameObject.layer, true))
 			{
-				if (nearestHotspot == null || (Vector3.Distance (transform.position, other.transform.position) <= Vector3.Distance (transform.position, nearestHotspot.transform.position)))
+				if (nearestHotspot == null ||
+					(transform.position - other.transform.position).sqrMagnitude <= (transform.position - nearestHotspot.transform.position).sqrMagnitude)
 				{
-					nearestHotspot = other.GetComponent <Hotspot>();
+					nearestHotspot = otherHotspot;
 				}
 
 				foreach (Hotspot hotspot in hotspots)
 				{
-					if (hotspot == other.GetComponent <Hotspot>())
+					if (hotspot == otherHotspot)
 					{
 						return;
 					}
 				}
 
-				hotspots.Add (other.GetComponent <Hotspot>());
+				hotspots.Add (otherHotspot);
 			}
         }
 
 
 		private void OnTriggerStay2D (Collider2D other)
 		{
-			if (other.GetComponent <Hotspot>() && IsLayerCorrect (other.gameObject.layer, true))
+			Hotspot otherHotspot = other.GetComponent <Hotspot>();
+			if (otherHotspot != null && IsLayerCorrect (other.gameObject.layer, true))
 			{
-				if (nearestHotspot == null || (Vector3.Distance (transform.position, other.transform.position) <= Vector3.Distance (transform.position, nearestHotspot.transform.position)))
+				if (nearestHotspot == null ||
+					(transform.position - other.transform.position).sqrMagnitude <= (transform.position - nearestHotspot.transform.position).sqrMagnitude)
 				{
-					nearestHotspot = other.GetComponent <Hotspot>();
+					nearestHotspot = otherHotspot;
 				}
 				
 				foreach (Hotspot hotspot in hotspots)
 				{
-					if (hotspot == other.GetComponent <Hotspot>())
+					if (hotspot == otherHotspot)
 					{
 						return;
 					}
 				}
-				hotspots.Add (other.GetComponent <Hotspot>());
+				hotspots.Add (otherHotspot);
 			}
 		}
 

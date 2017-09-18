@@ -120,6 +120,8 @@ namespace AC
 		public delegate Vector2 InputMouseDelegate (bool cusorIsLocked = false);
 		/** A delegate template for overriding mouse button detection */
 		public delegate bool InputMouseButtonDelegate (int button);
+		/** A delegate template for overriding touch position detection */
+		public delegate Vector2 InputTouchDelegate ();
 
 		/** A delegate for the InputGetButtonDown function, used to detect when a button is first pressed */
 		public InputButtonDelegate InputGetButtonDownDelegate = null;
@@ -129,12 +131,14 @@ namespace AC
 		public InputButtonDelegate InputGetButtonDelegate = null;
 		/** A delegate for the InputGetAxis function, used to detect the value of an input axis */
 		public InputAxisDelegate InputGetAxisDelegate = null;
-		/** A delagate for the InputGetMouseButton function, used to detect mouse clicks */
+		/** A delegate for the InputGetMouseButton function, used to detect mouse clicks */
 		public InputMouseButtonDelegate InputGetMouseButtonDelegate;
-		/** A delagate for the InputGetMouseDownButton function, used to detect when a mouse button is first clicked */
+		/** A delegate for the InputGetMouseDownButton function, used to detect when a mouse button is first clicked */
 		public InputMouseButtonDelegate InputGetMouseButtonDownDelegate;
-		/** A delagate for the InputMousePosition function, used to detect the mouse position */
+		/** A delegate for the InputMousePosition function, used to detect the mouse position */
 		public InputMouseDelegate InputMousePositionDelegate;
+		/** A delegate for the InputTouchPosition function, used to detect the touch position */
+		public InputTouchDelegate InputTouchPositionDelegate;
 		/** A delegate for the InputGetFreeAim function, used to get the free-aiming vector */
 		public InputMouseDelegate InputGetFreeAimDelegate;
 
@@ -420,7 +424,7 @@ namespace AC
 						}
 						else
 						{
-							mousePosition = Input.GetTouch (0).position;
+							mousePosition = InputTouchPosition ();
 						}
 					}
 
@@ -1562,6 +1566,21 @@ namespace AC
 				return new Vector2 (Screen.width / 2f, Screen.height / 2f);
 			}
 			return Input.mousePosition;
+		}
+
+
+		private Vector2 InputTouchPosition ()
+		{
+			if (InputTouchPositionDelegate != null)
+			{
+				return InputTouchPositionDelegate ();
+			}
+
+			if (Input.touchCount > 0)
+			{
+				return Input.GetTouch (0).position;
+			}
+			return Vector2.zero;			
 		}
 
 

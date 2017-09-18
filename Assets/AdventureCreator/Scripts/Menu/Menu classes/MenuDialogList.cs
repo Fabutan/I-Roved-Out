@@ -140,12 +140,12 @@ namespace AC
 		 * <summary>Initialises the linked Unity UI GameObjects.</summary>
 		 * <param name = "_menu">The element's parent Menu</param>
 		 */
-		public override void LoadUnityUI (AC.Menu _menu)
+		public override void LoadUnityUI (AC.Menu _menu, Canvas canvas)
 		{
 			int i=0;
 			foreach (UISlot uiSlot in uiSlots)
 			{
-				uiSlot.LinkUIElements ();
+				uiSlot.LinkUIElements (canvas);
 				if (uiSlot != null && uiSlot.uiButton != null)
 				{
 					int j=i;

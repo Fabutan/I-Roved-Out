@@ -270,6 +270,13 @@ MonoBehaviour:
     description: Queries either the plaform the game is running on.
     isEnabled: 1
     color: {r: 1, g: 1, b: 1, a: 1}
+  - fileName: ActionTimeline
+    category: 5
+    title: Control Timeline
+    description: Controls a Timeline.  This is only compatible with Unity 2017 or
+      newer.
+    isEnabled: 1
+    color: {r: 1, g: 1, b: 1, a: 1}
   - fileName: ActionEndGame
     category: 5
     title: End game
@@ -336,6 +343,12 @@ MonoBehaviour:
     description: Initiates a Quick Time Event for a set duration. The QTE type can
       either be a single key- press, holding a button down, or button-mashing. The
       Input button must be defined in Unity's Input Manager.
+    isEnabled: 1
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - fileName: ActionInputActive
+    category: 7
+    title: Toggle active
+    description: Enables or disables an Active Input
     isEnabled: 1
     color: {r: 1, g: 1, b: 1, a: 1}
   - fileName: ActionInventorySet
@@ -454,9 +467,7 @@ MonoBehaviour:
   - fileName: ActionEvent
     category: 11
     title: Call event
-    description: Sends a given message to a GameObject. Can be either a message commonly-used
-      by Adventure Creator (Interact, TurnOn, etc) or a custom one, with an integer
-      argument.
+    description: Calls a given function on a GameObject.
     isEnabled: 1
     color: {r: 1, g: 1, b: 1, a: 1}
   - fileName: ActionChangeMaterial
@@ -623,6 +634,12 @@ MonoBehaviour:
       but the last frame of the current scene can instead be overlayed. This allows
       for cinematic effects: if the next scene fades in, it will cause a crossfade
       effect; if the next scene doesn''t fade, it will cause a straight cut.'
+    isEnabled: 1
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - fileName: ActionFootstepSounds
+    category: 15
+    title: Change footsteps
+    description: Changes the sounds used by a FootstepSounds component.
     isEnabled: 1
     color: {r: 1, g: 1, b: 1, a: 1}
   - fileName: ActionVolume
@@ -981,6 +998,13 @@ MonoBehaviour:
     description: Queries either the plaform the game is running on.
     isEnabled: 1
     color: {r: 1, g: 1, b: 1, a: 1}
+  - fileName: ActionTimeline
+    category: 5
+    title: Control Timeline
+    description: Controls a Timeline.  This is only compatible with Unity 2017 or
+      newer.
+    isEnabled: 1
+    color: {r: 1, g: 1, b: 1, a: 1}
   - fileName: ActionEndGame
     category: 5
     title: End game
@@ -1047,6 +1071,12 @@ MonoBehaviour:
     description: Initiates a Quick Time Event for a set duration. The QTE type can
       either be a single key- press, holding a button down, or button-mashing. The
       Input button must be defined in Unity's Input Manager.
+    isEnabled: 1
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - fileName: ActionInputActive
+    category: 7
+    title: Toggle active
+    description: Enables or disables an Active Input
     isEnabled: 1
     color: {r: 1, g: 1, b: 1, a: 1}
   - fileName: ActionInventorySet
@@ -1165,9 +1195,7 @@ MonoBehaviour:
   - fileName: ActionEvent
     category: 11
     title: Call event
-    description: Sends a given message to a GameObject. Can be either a message commonly-used
-      by Adventure Creator (Interact, TurnOn, etc) or a custom one, with an integer
-      argument.
+    description: Calls a given function on a GameObject.
     isEnabled: 1
     color: {r: 1, g: 1, b: 1, a: 1}
   - fileName: ActionChangeMaterial
@@ -1334,6 +1362,12 @@ MonoBehaviour:
       but the last frame of the current scene can instead be overlayed. This allows
       for cinematic effects: if the next scene fades in, it will cause a crossfade
       effect; if the next scene doesn''t fade, it will cause a straight cut.'
+    isEnabled: 1
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - fileName: ActionFootstepSounds
+    category: 15
+    title: Change footsteps
+    description: Changes the sounds used by a FootstepSounds component.
     isEnabled: 1
     color: {r: 1, g: 1, b: 1, a: 1}
   - fileName: ActionVolume

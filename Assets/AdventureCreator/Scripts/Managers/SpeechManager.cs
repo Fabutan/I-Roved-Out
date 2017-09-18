@@ -2769,12 +2769,25 @@ namespace AC
 
 			ArrangeFromIndex (actions, prefix, 0);
 
+			minOrderValue ++;
 			foreach (Action _action in actions)
 			{
 				if (_action.isMarked)
 				{
 					// Wasn't arranged
 					_action.isMarked = false;
+
+					if (_action is ActionSpeech)
+					{
+						ActionSpeech actionSpeech = (ActionSpeech) _action;
+						SpeechLine speechLine = GetLine (actionSpeech.lineID);
+						if (speechLine != null)
+						{
+							speechLine.orderID = minOrderValue;
+							speechLine.orderPrefix = prefix;
+							minOrderValue ++;
+						}
+					}
 				}
 			}
 		}

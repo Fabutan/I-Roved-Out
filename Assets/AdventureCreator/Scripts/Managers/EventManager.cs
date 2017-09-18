@@ -414,12 +414,23 @@ namespace AC
 		}
 
 
-		// Player
+		// Characters
 
 		/** A delegate for the OnSetPlayer event */
 		public delegate void Delegate_SetPlayer (Player player);
 		/** An event triggered whenever a new Player is loaded into the scene */
 		public static Delegate_SetPlayer OnSetPlayer;
+
+		/** A delegate for the OnSetHeadTurnTarget event */
+		public delegate void Delegate_SetHeadTurnTarget (AC.Char character, Transform headTurnTarget, Vector3 targetOffset, bool isInstant);
+		/** An event triggered whenever a character's head is given a target to look at */
+		public static Delegate_SetHeadTurnTarget OnSetHeadTurnTarget;
+
+		/** A delegate for the OnClearHeadTurnTarget event */
+		public delegate void Delegate_ClearHeadTurnTarget (AC.Char character, bool isInstant);
+		/** An event triggered whenever a character stops looking at a target with their head */
+		public static Delegate_ClearHeadTurnTarget OnClearHeadTurnTarget;
+
 
 		/** 
 		 * <summary>Triggers the OnSetPlayer event.</summary>
@@ -430,6 +441,36 @@ namespace AC
 			if (OnSetPlayer != null)
 			{
 				OnSetPlayer (player);
+			}
+		}
+
+
+		/**
+		 * <summary>Triggers the OnSetHeadTurnTarget event.</summary>
+		 * <param name = "character">The character who is turning their head.</param>
+		 * <param name = "headTurnTarget">The Transform to look at</param>
+		 * <param name = "targetOffset">An offset in world-space to look at, relative to the headTurnTarget transform</param>
+		 * <param name = "isInstant">If True, the head-turn snaps instantly</param>
+		 */
+		public void Call_OnSetHeadTurnTarget (AC.Char character, Transform headTurnTarget, Vector3 targetOffset, bool isInstant)
+		{
+			if (OnSetHeadTurnTarget != null)
+			{
+				OnSetHeadTurnTarget (character, headTurnTarget, targetOffset, isInstant);
+			}
+		}
+
+
+		/**
+		 * <summary>Triggers the OnClearHeadTurnTarget event.</summary>
+		 * <param name = "character">The character who is no longer turning their head</param>
+		 * <param name = "isInstant">If True, the head stops turning instantly</param>
+		 */
+		public void Call_OnClearHeadTurnTarget (AC.Char character, bool isInstant)
+		{
+			if (OnClearHeadTurnTarget != null)
+			{
+				OnClearHeadTurnTarget (character, isInstant);
 			}
 		}
 

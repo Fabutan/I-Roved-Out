@@ -2633,6 +2633,8 @@ namespace AC
 				return;
 			}
 
+			bool isNew = (headTurnTarget != _headTurnTarget || headTurnTargetOffset != _headTurnTargetOffset);
+
 			headTurnTarget = _headTurnTarget;
 			headTurnTargetOffset = _headTurnTargetOffset;
 			headFacing = _headFacing;
@@ -2641,6 +2643,11 @@ namespace AC
 			{
 				CalculateHeadTurn ();
 				SnapHeadMovement ();
+			}
+
+			if (isNew || isInstant)
+			{
+				KickStarter.eventManager.Call_OnSetHeadTurnTarget (this, headTurnTarget, headTurnTargetOffset, isInstant);
 			}
 		}
 		
@@ -2655,6 +2662,7 @@ namespace AC
 			if (headFacing == _headFacing)
 			{
 				ClearHeadTurnTarget (isInstant);
+				KickStarter.eventManager.Call_OnClearHeadTurnTarget (this, isInstant);
 			}
 		}
 		

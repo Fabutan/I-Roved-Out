@@ -716,7 +716,7 @@ namespace AC
 		{
 			get
 			{
-				return orderPrefix + orderID.ToString ();
+				return orderPrefix + orderID.ToString ("D4");
 			}
 		}
 		#endif

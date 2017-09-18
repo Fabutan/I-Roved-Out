@@ -138,13 +138,13 @@ namespace AC
 		 * <summary>Initialises the linked Unity UI GameObject.</summary>
 		 * <param name = "_menu">The element's parent Menu</param>
 		 */
-		public override void LoadUnityUI (AC.Menu _menu)
+		public override void LoadUnityUI (AC.Menu _menu, Canvas canvas)
 		{
 			if (_menu.menuSource != MenuSource.AdventureCreator)
 			{
 				if (cycleUIBasis == CycleUIBasis.Button)
 				{
-					uiButton = LinkUIElement <UnityEngine.UI.Button>();
+					uiButton = LinkUIElement <UnityEngine.UI.Button> (canvas);
 					if (uiButton)
 					{
 						if (uiButton.GetComponentInChildren <Text>())
@@ -162,7 +162,7 @@ namespace AC
 					if (uiDropdown != null)
 					{
 						parentMenu = _menu;
-						uiDropdown = LinkUIElement <Dropdown>();
+						uiDropdown = LinkUIElement <Dropdown> (canvas);
 						uiDropdown.value = selected;
 						uiDropdown.onValueChanged.AddListener (delegate {
 	         				uiDropdownValueChangedHandler (uiDropdown);

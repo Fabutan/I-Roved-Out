@@ -550,7 +550,7 @@ namespace AC
 				else if (columnType == ColumnType.SpeechOrder)
 				{
 					cellText = speechLine.OrderIdentifier;
-					if (cellText == "-1")
+					if (cellText == "-0001")
 					{
 						cellText = "";
 					}

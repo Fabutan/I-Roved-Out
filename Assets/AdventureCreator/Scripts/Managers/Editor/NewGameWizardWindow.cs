@@ -351,7 +351,10 @@ namespace AC
 				CreateManagerPackage (gameName);
 
 				AssetDatabase.SaveAssets ();
-				references.sceneManager.InitialiseObjects ();
+				if (GameObject.FindObjectOfType <KickStarter>() == null)
+				{
+					references.sceneManager.InitialiseObjects ();
+				}
 				//pageNumber = 0;
 			}
 			catch

@@ -191,7 +191,7 @@ namespace AC
 		 * <summary>Initialises the linked Unity UI GameObject.</summary>
 		 * <param name = "_menu">The element's parent Menu</param>
 		 */
-		public virtual void LoadUnityUI (AC.Menu _menu)
+		public virtual void LoadUnityUI (AC.Menu _menu, Canvas canvas)
 		{}
 
 
@@ -1042,10 +1042,15 @@ namespace AC
 		}
 
 
-		protected T LinkUIElement <T> () where T : Behaviour
+		protected T LinkUIElement <T> (Canvas canvas) where T : Behaviour
 		{
-			T field = Serializer.returnComponent <T> (linkedUiID);
-			return field;
+			if (canvas != null)
+			{
+				T field = Serializer.GetGameObjectComponent <T> (linkedUiID, canvas.gameObject);
+				return field;
+			}
+			ACDebug.LogWarning ("Cannot find linked UI Element for " + title);
+			return null;
 		}
 
 

@@ -599,6 +599,16 @@ namespace AC
 		 */
 		public void UpdateMenuPosition (AC.Menu menu, Vector2 invertedMouse)
 		{
+			if (!menu.oneMenuPerSpeech && menu.appearType == AppearType.WhenSpeechPlays)
+			{
+				Speech speech = KickStarter.dialog.GetLatestSpeech ();
+				if (speech != null && !speech.MenuCanShow (menu))
+				{
+					// Don't update position for speech menus that are not for the current speech
+					return;
+				}
+			}
+
 			if (menu.IsUnityUI ())
 			{
 				if (Application.isPlaying)

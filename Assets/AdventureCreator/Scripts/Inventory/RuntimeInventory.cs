@@ -314,16 +314,17 @@ namespace AC
 		 * <param name = "amount">The amount if the inventory item to add, if the InvItem's canCarryMultiple = True</param>
 		 * <param name = "selectAfter">If True, then the inventory item will be automatically selected</param>
 		 * <param name = "playerID">The ID number of the Player to receive the item, if multiple Player prefabs are supported. If playerID = -1, the current player will receive the item</param>
+		 * <param name = "addToFront">If True, the new item will be added to the front of the inventory</param>
 		 */
-		public void Add (int _id, int amount = 1, bool selectAfter = false, int playerID = -1)
+		public void Add (int _id, int amount = 1, bool selectAfter = false, int playerID = -1, bool addToFront = false)
 		{
 			if (playerID >= 0 && KickStarter.player.ID != playerID)
 			{
-				AddToOtherPlayer (_id, amount, playerID);
+				AddToOtherPlayer (_id, amount, playerID, addToFront);
 			}
 			else
 			{
-				localItems = Add (_id, amount, localItems, selectAfter);
+				localItems = Add (_id, amount, localItems, selectAfter, addToFront);
 				KickStarter.eventManager.Call_OnChangeInventory (GetItem (_id), InventoryEventType.Add, amount);
 			}
 		}
@@ -335,9 +336,10 @@ namespace AC
 		 * <param name = "amount">The amount if the inventory item to add, if the InvItem's canCarryMultiple = True</param>
 		 * <param name = "itemList">The list of inventory items to add the new item to</param>
 		 * <param name = "selectAfter">If True, then the inventory item will be automatically selected</param>
+		 * <param name = "addToFront">If True, the new item will be added to the front of the inventory</param>
 		 * <returns>The modified List of inventory items</returns>
 		 */
-		public List<InvItem> Add (int _id, int amount, List<InvItem> itemList, bool selectAfter)
+		public List<InvItem> Add (int _id, int amount, List<InvItem> itemList, bool selectAfter, bool addToFront = false)
 		{
 			itemList = ReorderItems (itemList);
 			
@@ -365,7 +367,7 @@ namespace AC
 					return itemList;
 				}
 			}
-			
+
 			// Not already carrying the item
 			foreach (InvItem assetItem in KickStarter.inventoryManager.items)
 			{
@@ -381,6 +383,23 @@ namespace AC
 					
 					if (KickStarter.settingsManager.canReorderItems)
 					{
+						if (addToFront && itemList.Count > 0 && itemList[0] != null)
+						{
+							itemList.Insert (0, newItem);
+
+							if (newItem.canCarryMultiple && newItem.useSeparateSlots)
+							{
+								int count = newItem.count-1;
+								newItem.count = 1;
+								for (int j=0; j<count; j++)
+								{
+									itemList.Insert (0, newItem);
+								}
+							}
+
+							return itemList;	
+						}
+
 						// Insert into first "blank" space
 						for (int i=0; i<itemList.Count; i++)
 						{
@@ -412,12 +431,26 @@ namespace AC
 						newItem.count = 1;
 						for (int i=0; i<count; i++)
 						{
-							itemList.Add (newItem);
+							if (addToFront)
+							{
+								itemList.Insert (0, newItem);
+							}
+							else
+							{
+								itemList.Add (newItem);
+							}
 						}
 					}
 					else
 					{
-						itemList.Add (newItem);
+						if (addToFront)
+						{
+							itemList.Insert (0, newItem);
+						}
+						else
+						{
+							itemList.Add (newItem);
+						}
 					}
 					
 					if (selectAfter)
@@ -454,12 +487,12 @@ namespace AC
 		}
 		
 		
-		private void AddToOtherPlayer (int invID, int amount, int playerID)
+		private void AddToOtherPlayer (int invID, int amount, int playerID, bool addToFront)
 		{
 			SaveSystem saveSystem = GetComponent <SaveSystem>();
 			
 			List<InvItem> otherPlayerItems = saveSystem.GetItemsFromPlayer (playerID);
-			otherPlayerItems = Add (invID, amount, otherPlayerItems, false);
+			otherPlayerItems = Add (invID, amount, otherPlayerItems, false, addToFront);
 			saveSystem.AssignItemsToPlayer (otherPlayerItems, playerID);
 		}
 		
@@ -1044,7 +1077,10 @@ namespace AC
 				{
 					if (item2.combineID[i] == item1.id && item2.combineActionList[i] != null)
 					{
-						selectedItem = null;
+						if (KickStarter.settingsManager.inventoryDisableDefined)
+						{
+							selectedItem = null;
+						}
 
 						PlayerMenus.ForceOffAllMenus (true);
 						AdvGame.RunActionListAsset (item2.combineActionList [i]);
@@ -1059,7 +1095,10 @@ namespace AC
 					{
 						if (item1.combineID[i] == item2.id && item1.combineActionList[i] != null)
 						{
-							selectedItem = null;
+							if (KickStarter.settingsManager.inventoryDisableDefined)
+							{
+								selectedItem = null;
+							}
 
 							ActionListAsset assetFile = item1.combineActionList[i];
 							PlayerMenus.ForceOffAllMenus (true);

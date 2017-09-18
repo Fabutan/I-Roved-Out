@@ -45,7 +45,7 @@ namespace AC
 		{
 			conversation = AssignFile <Conversation> (parameters, parameterID, constantID, conversation);
 		}
-				
+
 		
 		override public float Run ()
 		{

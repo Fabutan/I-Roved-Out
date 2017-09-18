@@ -52,6 +52,7 @@ MonoBehaviour:
   inventoryInteractions: 1
   inventoryDisableLeft: 1
   inventoryDisableUnhandled: 1
+  inventoryDisableDefined: 1
   activeWhenHover: 0
   inventoryActiveEffect: 1
   inventoryPulseSpeed: 1

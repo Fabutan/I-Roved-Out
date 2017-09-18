@@ -108,9 +108,9 @@ namespace AC
 		 * <summary>Initialises the linked Unity UI GameObject.</summary>
 		 * <param name = "_menu The element's parent Menu</param>
 		 */
-		public override void LoadUnityUI (AC.Menu _menu)
+		public override void LoadUnityUI (AC.Menu _menu, Canvas canvas)
 		{
-			uiInput = LinkUIElement <InputField>();
+			uiInput = LinkUIElement <InputField> (canvas);
 		}
 		
 

@@ -72,7 +72,7 @@ namespace AC
 		private Vector2 perspectiveOffset;
 		private Vector3 originalPosition;
 
-		private bool is2D;
+		private bool _is2D;
 
 
 		protected override void Awake ()
@@ -83,7 +83,7 @@ namespace AC
 
 			if (KickStarter.settingsManager)
 			{
-				is2D = KickStarter.settingsManager.IsUnity2D ();
+				_is2D = KickStarter.settingsManager.IsUnity2D ();
 			}
 
 			base.Awake ();
@@ -92,7 +92,7 @@ namespace AC
 
 		public override bool Is2D ()
 		{
-			return is2D;
+			return _is2D;
 		}
 		
 
@@ -232,7 +232,7 @@ namespace AC
 
 		private void SetProjection ()
 		{
-			if (!_camera.orthographic && is2D)
+			if (!_camera.orthographic && _is2D)
 			{
 				_camera.projectionMatrix = AdvGame.SetVanishingPoint (_camera, perspectiveOffset);
 			}

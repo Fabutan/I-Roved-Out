@@ -156,8 +156,10 @@ namespace AC
 		public InventoryInteractions inventoryInteractions = InventoryInteractions.Single;
 		/** If True, then left-clicking will de-select an inventory item */
 		public bool inventoryDisableLeft = true;
-		/** If True, then triggering an unhandled Inventory interaction will de-select an inventory item */
+		/** If True, then triggering an unhandled Inventory interaction will de-select the active inventory item */
 		public bool inventoryDisableUnhandled = true;
+		/** If True, then triggering a defined Inventory interaction will-deselect the active inventory item */
+		public bool inventoryDisableDefined = true;
 		/** If True, then an inventory item will show its "active" texture when the mouse hovers over it */
 		public bool activeWhenHover = false;
 		/** The effect to apply to an active inventory item's icon (None, Pulse, Simple) */
@@ -532,7 +534,7 @@ namespace AC
 				}
 
 				useProfiles = CustomGUILayout.ToggleLeft ("Enable save game profiles?", useProfiles, "AC.KickStarter.settingsManager.useProfiles");
-				#if !UNITY_WEBPLAYER && !UNITY_ANDROID && !UNITY_WINRT && !UNITY_WII && !UNITY_WEBGL
+				#if !UNITY_WEBPLAYER && !UNITY_ANDROID && !UNITY_WINRT && !UNITY_WII && !UNITY_WEBGL && !UNITY_PS4
 				saveTimeDisplay = (SaveTimeDisplay) CustomGUILayout.EnumPopup ("Time display:", saveTimeDisplay, "AC.KickStarter.settingsManager.saveTimeDisplay");
 				takeSaveScreenshots = CustomGUILayout.ToggleLeft ("Take screenshot when saving?", takeSaveScreenshots, "AC.KickStarter.settingsManager.takeSaveScreenshots");
 				orderSavesByUpdateTime = CustomGUILayout.ToggleLeft ("Order save lists by update time?", orderSavesByUpdateTime, "AC.KickStarter.settingsManager.orderSavesByUpdateTime");
@@ -827,6 +829,7 @@ namespace AC
 
 				if (CanSelectItems (false) && !inventoryDragDrop)
 				{
+					inventoryDisableDefined = CustomGUILayout.ToggleLeft ("Defined interactions deselect active item?", inventoryDisableDefined, "AC.KickStarter.settingsManager.inventoryDisableDefined");
 					inventoryDisableUnhandled = CustomGUILayout.ToggleLeft ("Unhandled interactions deselect active item?", inventoryDisableUnhandled, "AC.KickStarter.settingsManager.inventoryDisableUnhandled");
 					inventoryDisableLeft = CustomGUILayout.ToggleLeft ("Left-click deselects active item?", inventoryDisableLeft, "AC.KickStarter.settingsManager.inventoryDisableLeft");
 

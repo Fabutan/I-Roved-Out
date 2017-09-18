@@ -60,7 +60,7 @@ namespace AC
 
 		public override void Process ()
 		{
-			bool usedEvent = SendUpdateEventToSelectedObject();
+			bool usedEvent = SendUpdateEventToSelectedObject ();
 	 
 			if (eventSystem.sendNavigationEvents)
 			{
@@ -71,7 +71,7 @@ namespace AC
 	 
 				if (!usedEvent)
 				{
-					SendSubmitEventToSelectedObject();
+					SendSubmitEventToSelectedObject ();
 				}
 			}
 	 

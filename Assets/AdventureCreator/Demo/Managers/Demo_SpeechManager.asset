@@ -1702,7 +1702,7 @@ MonoBehaviour:
   lipSyncSpeed: 1
   maxID: -1
   sceneFiles:
-  - Assets/AdventureCreator/Demo/Scenes/Basement.unity
+  - Assets/IRovedOut/GameScenes/SceneTest.unity
   activeLineID: 54
   mergeMatchingSpeechIDs: 0
   useSpeechTags: 0

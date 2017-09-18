@@ -38,7 +38,7 @@ namespace AC
 		/** A List of SaveFile variables, storing all available import files. */
 		public List<SaveFile> foundImportFiles = new List<SaveFile>();
 
-		#if !UNITY_WEBPLAYER && !UNITY_WINRT && !UNITY_WII
+		#if !UNITY_WEBPLAYER && !UNITY_WINRT && !UNITY_WII && !UNITY_PS4
 		private string saveDirectory;
 		#endif
 
@@ -78,7 +78,7 @@ namespace AC
 		
 		public void OnStart ()
 		{
-			#if !UNITY_WEBPLAYER && !UNITY_WINRT && !UNITY_WII
+			#if !UNITY_WEBPLAYER && !UNITY_WINRT && !UNITY_WII && !UNITY_PS4
 			saveDirectory = Application.persistentDataPath;
 			#endif
 			GatherSaveFiles ();
@@ -106,7 +106,7 @@ namespace AC
 			{
 				bool isAutoSave = false;
 
-				#if UNITY_WEBPLAYER || UNITY_WINRT || UNITY_WII
+				#if UNITY_WEBPLAYER || UNITY_WINRT || UNITY_WII || UNITY_PS4
 			
 				if (PlayerPrefs.HasKey (GetProjectName () + GetSaveIDFile (i)))
 				{
@@ -211,7 +211,7 @@ namespace AC
 				label = "Autosave";
 			}
 		
-			#if !UNITY_WEBPLAYER && !UNITY_ANDROID && !UNITY_WINRT && !UNITY_WII
+			#if !UNITY_WEBPLAYER && !UNITY_ANDROID && !UNITY_WINRT && !UNITY_WII && !UNITY_PS4
 
 			if (KickStarter.settingsManager.saveTimeDisplay != SaveTimeDisplay.None)
 			{
@@ -397,7 +397,7 @@ namespace AC
 				return SaveMethod.Json;
 			}
 
-			#if UNITY_IPHONE || UNITY_WP8 || UNITY_WINRT || UNITY_WII
+			#if UNITY_IPHONE || UNITY_WP8 || UNITY_WINRT || UNITY_WII || UNITY_PS4
 			return SaveMethod.XML;
 			#else
 			return SaveMethod.Binary;
@@ -1053,7 +1053,7 @@ namespace AC
 				Options.optionsData.lastSaveID = saveID;
 				Options.UpdateSaveLabels (foundSaveFiles.ToArray ());
 
-				#if !UNITY_WEBPLAYER && !UNITY_WINRT && !UNITY_WII
+				#if !UNITY_WEBPLAYER && !UNITY_WINRT && !UNITY_WII && !UNITY_PS4
 				if (KickStarter.settingsManager.takeSaveScreenshots)
 				{
 					StartCoroutine ("TakeScreenshot", GetSaveScreenshotName (saveID));
@@ -1221,7 +1221,7 @@ namespace AC
 		{
 			string fileName = "";
 
-			#if UNITY_WEBPLAYER || UNITY_WINRT || UNITY_WII
+			#if UNITY_WEBPLAYER || UNITY_WINRT || UNITY_WII || UNITY_PS4
 			fileName = GetProjectName () + GetSaveIDFile (saveID);
 			#else
 			fileName = saveDirectory + Path.DirectorySeparatorChar.ToString () + GetProjectName () + GetSaveIDFile (saveID, profileID) + GetSaveExtension ();
@@ -1241,7 +1241,7 @@ namespace AC
 		{
 			string fileName = "";
 			
-			#if UNITY_WEBPLAYER || UNITY_WINRT || UNITY_WII
+			#if UNITY_WEBPLAYER || UNITY_WINRT || UNITY_WII || UNITY_PS4
 			fileName = GetProjectName () + GetSaveIDFile (saveID);
 			#else
 			fileName = saveDirectory + Path.DirectorySeparatorChar.ToString () + GetProjectName () + GetSaveIDFile (saveID, profileID) + ".jpg";

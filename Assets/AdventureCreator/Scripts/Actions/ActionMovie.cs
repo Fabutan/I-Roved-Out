@@ -36,7 +36,7 @@ namespace AC
 		public bool prepareOnly = false;
 		#endif
 
-		#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS)
+		#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS || UNITY_PS4)
 
 		public Material material;
 		public int materialParameterID = -1;
@@ -71,14 +71,14 @@ namespace AC
 			videoPlayer = AssignFile <VideoPlayer> (parameters, videoPlayerParameterID, videoPlayerConstantID, videoPlayer);
 			#endif
 
-			#if UNITY_WEBGL
+			#if UNITY_WEBGL || UNITY_PS4
 			#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_TVOS
 			#elif UNITY_5 || UNITY_2017_1_OR_NEWER || UNITY_PRO_LICENSE
 			material = (Material) AssignObject <Material> (parameters, materialParameterID, material);
 			movieClip = (MovieTexture) AssignObject <MovieTexture> (parameters, movieClipParameterID, movieClip);
 			#endif
 
-			#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS)
+			#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS || UNITY_PS4)
 			sound = AssignFile (soundID, sound);
 			#endif
 		}
@@ -177,7 +177,7 @@ namespace AC
 				return 0f;
 			}
 
-			#if UNITY_WEBGL
+			#if UNITY_WEBGL || UNITY_PS4
 
 			return 0f;
 
@@ -338,7 +338,7 @@ namespace AC
 			{
 				if (isRunning)
 				{
-					#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS)
+					#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS || UNITY_PS4)
 					if (includeAudio)
 					{
 						sound.Stop ();
@@ -360,7 +360,7 @@ namespace AC
 		}
 
 
-		#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS)
+		#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS || UNITY_PS4)
 		private void CreateFullScreenMovie ()
 		{
 			GameObject movieOb = new GameObject ("Movie clip");
@@ -439,9 +439,9 @@ namespace AC
 				return;
 			}
 
-			#if UNITY_WEBGL
+			#if UNITY_WEBGL || UNITY_PS4
 
-			EditorGUILayout.HelpBox ("This option is not available on the WebGL platform.", MessageType.Info);
+			EditorGUILayout.HelpBox ("This option is not available on the current platform.", MessageType.Info);
 
 			#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_TVOS
 
@@ -556,7 +556,7 @@ namespace AC
 			{
 				return " (" + filePath + ")";
 			}
-			#elif !UNITY_WEBGL
+			#elif !(UNITY_WEBGL || UNITY_PS4)
 			if (movieClip)
 			{
 				return " (" + movieClip.name + ")";

@@ -345,7 +345,7 @@ namespace AC
 
 			if (localCanvas != null)
 			{
-				rectTransform = Serializer.returnComponent <RectTransform> (rectTransformID);
+				rectTransform = Serializer.GetGameObjectComponent <RectTransform> (rectTransformID, localCanvas.gameObject);
 				if (localCanvas.renderMode != RenderMode.ScreenSpaceOverlay && localCanvas.worldCamera == null)
 				{
 					localCanvas.worldCamera = Camera.main;
@@ -360,7 +360,7 @@ namespace AC
 			{
 				foreach (MenuElement _element in elements)
 				{
-					_element.LoadUnityUI (this);
+					_element.LoadUnityUI (this, localCanvas);
 				}
 			}
 

@@ -424,7 +424,7 @@ namespace AC
 					if (hotspot)
 					{
 						if (KickStarter.playerInput.GetMouseState () == MouseState.SingleClick ||
-						    ( KickStarter.settingsManager.InventoryDragDrop && IsDroppingInventory ()) ||
+						    (KickStarter.settingsManager.InventoryDragDrop && IsDroppingInventory ()) ||
 						    (KickStarter.settingsManager.MouseOverForInteractionMenu () && KickStarter.runtimeInventory.hoverItem == null && KickStarter.runtimeInventory.SelectedItem == null && clickedNew && !IsDroppingInventory ()))
 						{
 							if (KickStarter.runtimeInventory.hoverItem == null && KickStarter.playerInput.GetMouseState () == MouseState.SingleClick && 
@@ -457,8 +457,11 @@ namespace AC
 
 								if (KickStarter.playerMenus.IsInteractionMenuOn () && KickStarter.settingsManager.SelectInteractionMethod () == SelectInteractions.CyclingMenuAndClickingHotspot)
 								{
-									ClickHotspotToInteract ();
-									return;
+									if (KickStarter.playerInput.GetMouseState () == MouseState.SingleClick)
+									{
+										ClickHotspotToInteract ();
+										return;
+									}
 								}
 								
 								if (clickedNew && doubleTap)
@@ -1179,7 +1182,7 @@ namespace AC
 				else
 				{
 					KickStarter.stateHandler.gameState = GameState.Normal;
-					if ( KickStarter.settingsManager.InventoryDragDrop)
+					if (KickStarter.settingsManager.InventoryDragDrop)
 					{
 						KickStarter.runtimeInventory.SetNull ();
 					}
@@ -1187,7 +1190,10 @@ namespace AC
 			}
 			else
 			{
-				KickStarter.runtimeInventory.SetNull ();
+				if (KickStarter.settingsManager.InventoryDragDrop || KickStarter.settingsManager.inventoryDisableDefined)
+				{
+					KickStarter.runtimeInventory.SetNull ();
+				}
 				
 				if (_hotspot.interactionSource == InteractionSource.AssetFile)
 				{

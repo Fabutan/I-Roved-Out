@@ -96,15 +96,15 @@ namespace AC
 		 * <summary>Initialises the linked Unity UI GameObjects.</summary>
 		 * <param name = "_menu">The element's parent Menu</param>
 		 */
-		public override void LoadUnityUI (AC.Menu _menu)
+		public override void LoadUnityUI (AC.Menu _menu, Canvas canvas)
 		{
 			if (uiImageType == UIImageType.Image)
 			{
-				uiImage = LinkUIElement <Image>();
+				uiImage = LinkUIElement <Image> (canvas);
 			}
 			else if (uiImageType == UIImageType.RawImage)
 			{
-				uiRawImage = LinkUIElement <RawImage>();
+				uiRawImage = LinkUIElement <RawImage> (canvas);
 			}
 		}
 		

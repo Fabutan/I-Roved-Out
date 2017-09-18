@@ -71,7 +71,7 @@ namespace AC
 		/** How much slower vertical movement is compared to horizontal movement, if the game is in 2D and overriderVerticalReductionFactor = True */
 		public float verticalReductionFactor = 0.7f;
 
-		#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS)
+		#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS || UNITY_PS4)
 		private MovieTexture fullScreenMovie;
 		#endif
 		private IStateChange[] stateChangeHooks;
@@ -356,7 +356,7 @@ namespace AC
 		}
 
 
-		#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS)
+		#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS || UNITY_PS4)
 		/**
 		 * <summary>Assigns a MovieTexture as the one to pause when the game is paused.</summary>
 		 * <param name = "movieTexture">The MovieTexture to pause when the game is paused.</summary>
@@ -368,7 +368,7 @@ namespace AC
 		#endif
 		
 
-		#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS)
+		#if !(UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_WEBGL || UNITY_TVOS || UNITY_PS4)
 		/**
 		 * <summary>Unassigns the currently-set MovieTexture to pause when the game is paused.
 		 * This should be called once the movie has finished playing.</summary>

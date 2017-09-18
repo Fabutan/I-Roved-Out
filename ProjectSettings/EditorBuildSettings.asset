@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/IRovedOut/GameScenes/SceneTest.unity
     guid: 9f64fbdcbdf694e64b5a9fa5be382f38
+  - enabled: 1
+    path: Assets/IRovedOut/GameScenes/MoonlitPier.unity
+    guid: 1d34ad9f7707cc74ab2b16e1c83a10e2
