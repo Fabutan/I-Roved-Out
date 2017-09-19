@@ -307,7 +307,7 @@ MonoBehaviour:
   isTalking: 0
   frameFlipping: 1
   flipCustomAnims: 0
-  walkSpeedScale: 6
+  walkSpeedScale: 4
   runSpeedScale: 6
   turnSpeed: 7
   acceleration: 6
