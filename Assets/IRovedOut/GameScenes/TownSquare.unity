@@ -108,6 +108,18 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &15548583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c0bf4f1f8a744469ac79bba16d7b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  is2D: 0
 --- !u!1001 &87875564
 Prefab:
   m_ObjectHideFlags: 0
@@ -198,63 +210,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
   m_PrefabInternal: {fileID: 87875564}
---- !u!114 &121944896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b3339a0ba7074d969436b88c517d06f, type: 3}
-  m_Name: ActionInstantiate(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  id: 0
-  category: 11
-  title: Add or remove
-  description: Instantiates or deletes GameObjects within the current scene. To ensure
-    this works with save games correctly, place any prefabs to be added in a Resources
-    asset folder.
-  isDisplayed: 1
-  showComment: 0
-  comment: 
-  showOutputSockets: 1
-  numSockets: 1
-  willWait: 0
-  isRunning: 0
-  lastResult:
-    resultAction: 0
-    skipAction: -10
-    skipActionActual: {fileID: 0}
-    linkedCutscene: {fileID: 0}
-    linkedAsset: {fileID: 0}
-  endAction: 1
-  skipAction: 2
-  skipActionActual: {fileID: 121944896}
-  linkedCutscene: {fileID: 0}
-  linkedAsset: {fileID: 0}
-  isEnabled: 1
-  isAssetFile: 0
-  isMarked: 0
-  isBreakPoint: 0
-  nodeRect:
-    serializedVersion: 2
-    x: 14
-    y: 398
-    width: 300
-    height: 122
-  nodeHeight: 0
-  gameObject: {fileID: 479793563}
-  parameterID: -1
-  constantID: 0
-  replaceGameObject: {fileID: 0}
-  replaceParameterID: -1
-  replaceConstantID: 0
-  relativeGameObject: {fileID: 0}
-  relativeGameObjectID: 0
-  relativeGameObjectParameterID: -1
-  invAction: 1
-  positionRelativeTo: 0
 --- !u!1 &156573794
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,71 +306,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is2D: 0
---- !u!114 &249173678
-MonoBehaviour:
+--- !u!1001 &253734779
+Prefab:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed656dc9f403a441f8fe89408c7a7189, type: 3}
-  m_Name: ActionSpeech(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  id: 0
-  category: 4
-  title: Play speech
-  description: "Makes a Character talk, or \u2013 if no Character is specified \u2013
-    displays a message. Subtitles only appear if they are enabled from the Options
-    menu. A 'thinking' effect can be produced by opting to not play any animation."
-  isDisplayed: 1
-  showComment: 0
-  comment: 
-  showOutputSockets: 1
-  numSockets: 1
-  willWait: 0
-  isRunning: 0
-  lastResult:
-    resultAction: 0
-    skipAction: -10
-    skipActionActual: {fileID: 0}
-    linkedCutscene: {fileID: 0}
-    linkedAsset: {fileID: 0}
-  endAction: 0
-  skipAction: 1
-  skipActionActual: {fileID: 1249982605}
-  linkedCutscene: {fileID: 0}
-  linkedAsset: {fileID: 0}
-  isEnabled: 1
-  isAssetFile: 0
-  isMarked: 0
-  isBreakPoint: 0
-  nodeRect:
-    serializedVersion: 2
-    x: 14
-    y: 14
-    width: 300
-    height: 202
-  nodeHeight: 0
-  constantID: 0
-  parameterID: -1
-  messageParameterID: -1
-  isPlayer: 1
-  speaker: {fileID: 0}
-  messageText: I swear I've seen this before.
-  lineID: -1
-  multiLineIDs: 
-  isBackground: 0
-  noAnimation: 0
-  headClip: {fileID: 0}
-  mouthClip: {fileID: 0}
-  play2DHeadAnim: 0
-  headClip2D: 
-  headLayer: 0
-  play2DMouthAnim: 0
-  mouthClip2D: 
-  mouthLayer: 0
-  waitTimeOffset: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1022464358}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 2454e47dbf358484bb5cfba10d699562, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -9.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2454e47dbf358484bb5cfba10d699562, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2454e47dbf358484bb5cfba10d699562, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2454e47dbf358484bb5cfba10d699562, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2454e47dbf358484bb5cfba10d699562, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2454e47dbf358484bb5cfba10d699562, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.7088333
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2454e47dbf358484bb5cfba10d699562, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7053761
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2454e47dbf358484bb5cfba10d699562, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2454e47dbf358484bb5cfba10d699562, type: 2}
+      propertyPath: m_Name
+      value: 'Marker2D: TransitionLeft'
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2454e47dbf358484bb5cfba10d699562, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90.28001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2454e47dbf358484bb5cfba10d699562, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &253734780 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 2454e47dbf358484bb5cfba10d699562, type: 2}
+  m_PrefabInternal: {fileID: 253734779}
+--- !u!114 &253734781 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11400000, guid: 2454e47dbf358484bb5cfba10d699562,
+    type: 2}
+  m_PrefabInternal: {fileID: 253734779}
+  m_Script: {fileID: 11500000, guid: bbbbb3c8d2a7340dab40d45d6033e69e, type: 3}
 --- !u!1 &261662403
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +600,126 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &453843435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d11677f69f745f88dbe9922511d53f, type: 3}
+  m_Name: ActionScene(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 14
+  title: Switch
+  description: 'Moves the Player to a new scene. The scene must be listed in Unity''s
+    Build Settings. By default, the screen will cut to black during the transition,
+    but the last frame of the current scene can instead be overlayed. This allows
+    for cinematic effects: if the next scene fades in, it will cause a crossfade effect;
+    if the next scene doesn''t fade, it will cause a straight cut.'
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 0
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: -1
+  skipActionActual: {fileID: 0}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 300
+    height: 60
+  nodeHeight: 0
+  chooseSceneBy: 1
+  sceneNumber: 0
+  sceneNumberParameterID: -1
+  sceneName: Lakeside_TreeMan
+  sceneNameParameterID: -1
+  assignScreenOverlay: 0
+  onlyPreload: 0
+  relativePosition: 0
+  relativeMarker: {fileID: 0}
+  relativeMarkerID: 0
+  relativeMarkerParameterID: -1
+  forceReload: 0
+--- !u!114 &458026249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d11677f69f745f88dbe9922511d53f, type: 3}
+  m_Name: ActionScene
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 14
+  title: Switch
+  description: 'Moves the Player to a new scene. The scene must be listed in Unity''s
+    Build Settings. By default, the screen will cut to black during the transition,
+    but the last frame of the current scene can instead be overlayed. This allows
+    for cinematic effects: if the next scene fades in, it will cause a crossfade effect;
+    if the next scene doesn''t fade, it will cause a straight cut.'
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 0
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: -1
+  skipActionActual: {fileID: 0}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 300
+    height: 60
+  nodeHeight: 0
+  chooseSceneBy: 1
+  sceneNumber: 0
+  sceneNumberParameterID: -1
+  sceneName: Lakeside_TreeMan
+  sceneNameParameterID: -1
+  assignScreenOverlay: 0
+  onlyPreload: 0
+  relativePosition: 0
+  relativeMarker: {fileID: 0}
+  relativeMarkerID: 0
+  relativeMarkerParameterID: -1
+  forceReload: 0
 --- !u!1001 &459271256
 Prefab:
   m_ObjectHideFlags: 0
@@ -914,6 +984,66 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &584275371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d11677f69f745f88dbe9922511d53f, type: 3}
+  m_Name: ActionScene(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 14
+  title: Switch
+  description: 'Moves the Player to a new scene. The scene must be listed in Unity''s
+    Build Settings. By default, the screen will cut to black during the transition,
+    but the last frame of the current scene can instead be overlayed. This allows
+    for cinematic effects: if the next scene fades in, it will cause a crossfade effect;
+    if the next scene doesn''t fade, it will cause a straight cut.'
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 0
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: -1
+  skipActionActual: {fileID: 0}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 300
+    height: 60
+  nodeHeight: 0
+  chooseSceneBy: 1
+  sceneNumber: 0
+  sceneNumberParameterID: -1
+  sceneName: SceneTest
+  sceneNameParameterID: -1
+  assignScreenOverlay: 0
+  onlyPreload: 0
+  relativePosition: 0
+  relativeMarker: {fileID: 0}
+  relativeMarkerID: 0
+  relativeMarkerParameterID: -1
+  forceReload: 0
 --- !u!1001 &584350196
 Prefab:
   m_ObjectHideFlags: 0
@@ -1412,6 +1542,96 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &688056246
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1781372542}
+    m_Modifications:
+    - target: {fileID: 11400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: useButtons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: m_Name
+      value: TransitionLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: m_Size.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: hotspotName
+      value: To Lakeside
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: walkToMarker
+      value: 
+      objectReference: {fileID: 253734781}
+    - target: {fileID: 11400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: provideUseInteraction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: useButtons.Array.data[0].proximity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: useButtons.Array.data[0].parameterID
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: useButtons.Array.data[0].interaction
+      value: 
+      objectReference: {fileID: 1954023584}
+    - target: {fileID: 11400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: useButtons.Array.data[0].playerAction
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &688056247 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 91d6ab39027244ea689b8f0ec9b5b548, type: 2}
+  m_PrefabInternal: {fileID: 688056246}
 --- !u!1001 &715337208
 Prefab:
   m_ObjectHideFlags: 0
@@ -1482,62 +1702,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a39e31ce28cc48b096320990773071b, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &764992382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aac25eb7cbe8345d6baaf5efb8fc62e8, type: 3}
-  m_Name: ActionInventorySet(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  id: 0
-  category: 8
-  title: Add or remove
-  description: Adds or removes an item from the Player's inventory. Items are defined
-    in the Inventory Manager. If the player can carry multiple amounts of the item,
-    more options will show.
-  isDisplayed: 1
-  showComment: 0
-  comment: 
-  showOutputSockets: 1
-  numSockets: 1
-  willWait: 0
-  isRunning: 0
-  lastResult:
-    resultAction: 0
-    skipAction: -10
-    skipActionActual: {fileID: 0}
-    linkedCutscene: {fileID: 0}
-    linkedAsset: {fileID: 0}
-  endAction: 0
-  skipAction: 2
-  skipActionActual: {fileID: 1519808908}
-  linkedCutscene: {fileID: 0}
-  linkedAsset: {fileID: 0}
-  isEnabled: 1
-  isAssetFile: 0
-  isMarked: 0
-  isBreakPoint: 0
-  nodeRect:
-    serializedVersion: 2
-    x: 14
-    y: 246
-    width: 300
-    height: 122
-  nodeHeight: 0
-  invAction: 0
-  parameterID: -1
-  invID: 1
-  replaceParameterID: -1
-  invIDReplace: 0
-  setAmount: 0
-  amount: 1
-  setPlayer: 0
-  playerID: 0
-  addToFront: 0
 --- !u!1 &858073593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,69 +2099,10 @@ Transform:
   - {fileID: 1345976882}
   - {fileID: 1443372731}
   - {fileID: 657329579}
+  - {fileID: 253734780}
   m_Father: {fileID: 1886250938}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1076540135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1d11677f69f745f88dbe9922511d53f, type: 3}
-  m_Name: ActionScene(Clone)
-  m_EditorClassIdentifier: 
-  id: 0
-  category: 14
-  title: Switch
-  description: 'Moves the Player to a new scene. The scene must be listed in Unity''s
-    Build Settings. By default, the screen will cut to black during the transition,
-    but the last frame of the current scene can instead be overlayed. This allows
-    for cinematic effects: if the next scene fades in, it will cause a crossfade effect;
-    if the next scene doesn''t fade, it will cause a straight cut.'
-  isDisplayed: 1
-  showComment: 0
-  comment: 
-  showOutputSockets: 1
-  numSockets: 0
-  willWait: 0
-  isRunning: 0
-  lastResult:
-    resultAction: 0
-    skipAction: -10
-    skipActionActual: {fileID: 0}
-    linkedCutscene: {fileID: 0}
-    linkedAsset: {fileID: 0}
-  endAction: 0
-  skipAction: -1
-  skipActionActual: {fileID: 0}
-  linkedCutscene: {fileID: 0}
-  linkedAsset: {fileID: 0}
-  isEnabled: 1
-  isAssetFile: 0
-  isMarked: 0
-  isBreakPoint: 0
-  nodeRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 300
-    height: 60
-  nodeHeight: 0
-  chooseSceneBy: 1
-  sceneNumber: 0
-  sceneNumberParameterID: -1
-  sceneName: SceneTest
-  sceneNameParameterID: -1
-  assignScreenOverlay: 0
-  onlyPreload: 0
-  relativePosition: 0
-  relativeMarker: {fileID: 0}
-  relativeMarkerID: 0
-  relativeMarkerParameterID: -1
-  forceReload: 0
 --- !u!1 &1226249907
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,6 +2382,71 @@ Transform:
   m_Father: {fileID: 919521295}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1373822013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed656dc9f403a441f8fe89408c7a7189, type: 3}
+  m_Name: ActionSpeech(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 4
+  title: Play speech
+  description: "Makes a Character talk, or \u2013 if no Character is specified \u2013
+    displays a message. Subtitles only appear if they are enabled from the Options
+    menu. A 'thinking' effect can be produced by opting to not play any animation."
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 1
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: 1
+  skipActionActual: {fileID: 1249982605}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 14
+    y: 14
+    width: 300
+    height: 202
+  nodeHeight: 0
+  constantID: 0
+  parameterID: -1
+  messageParameterID: -1
+  isPlayer: 1
+  speaker: {fileID: 0}
+  messageText: I swear I've seen this before.
+  lineID: -1
+  multiLineIDs: 
+  isBackground: 0
+  noAnimation: 0
+  headClip: {fileID: 0}
+  mouthClip: {fileID: 0}
+  play2DHeadAnim: 0
+  headClip2D: 
+  headLayer: 0
+  play2DMouthAnim: 0
+  mouthClip2D: 
+  mouthLayer: 0
+  waitTimeOffset: 0
 --- !u!1001 &1443372730
 Prefab:
   m_ObjectHideFlags: 0
@@ -2337,6 +2507,62 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1443372730}
   m_Script: {fileID: 11500000, guid: bbbbb3c8d2a7340dab40d45d6033e69e, type: 3}
+--- !u!114 &1452867082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0643024da91f402a9281e781736a4c6, type: 3}
+  m_Name: ActionCharPathFind(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 2
+  title: Move to point
+  description: Moves a character to a given Marker object. By default, the character
+    will attempt to pathfind their way to the marker, but can optionally just move
+    in a straight line.
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 1
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 1
+  skipAction: -1
+  skipActionActual: {fileID: 0}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 148
+    y: 264
+    width: 300
+    height: 176
+  nodeHeight: 0
+  charToMoveParameterID: -1
+  markerParameterID: -1
+  charToMoveID: 0
+  markerID: 0
+  marker: {fileID: 1443372732}
+  isPlayer: 1
+  charToMove: {fileID: 0}
+  speed: 0
+  pathFind: 1
+  doFloat: 0
 --- !u!1 &1453541178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,6 +2948,62 @@ MonoBehaviour:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6ea1e18e6eb914b02a9ad3f5f366edc5, type: 2}
   m_PrefabInternal: {fileID: 1606869270}
+--- !u!114 &1618363072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac25eb7cbe8345d6baaf5efb8fc62e8, type: 3}
+  m_Name: ActionInventorySet(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 8
+  title: Add or remove
+  description: Adds or removes an item from the Player's inventory. Items are defined
+    in the Inventory Manager. If the player can carry multiple amounts of the item,
+    more options will show.
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 1
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: 2
+  skipActionActual: {fileID: 1519808908}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 14
+    y: 246
+    width: 300
+    height: 122
+  nodeHeight: 0
+  invAction: 0
+  parameterID: -1
+  invID: 1
+  replaceParameterID: -1
+  invIDReplace: 0
+  setAmount: 0
+  amount: 1
+  setPlayer: 0
+  playerID: 0
+  addToFront: 0
 --- !u!1 &1624631319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,6 +3173,67 @@ MonoBehaviour:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 9c6d82e28b280448ea70b3f4f7011508, type: 2}
   m_PrefabInternal: {fileID: 1753988909}
+--- !u!114 &1763383236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee55ab6fc4c1a4080a3e890703f10e69, type: 3}
+  m_Name: ActionSceneCheck(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 14
+  title: Check
+  description: Queries either the current scene, or the last one visited.
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 2
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: -1
+  skipActionActual: {fileID: 0}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 14
+    y: 14
+    width: 300
+    height: 140
+  nodeHeight: 0
+  resultActionTrue: 0
+  skipActionTrue: -1
+  skipActionTrueActual: {fileID: 0}
+  linkedCutsceneTrue: {fileID: 0}
+  linkedAssetTrue: {fileID: 0}
+  resultActionFail: 1
+  skipActionFail: -1
+  skipActionFailActual: {fileID: 0}
+  linkedCutsceneFail: {fileID: 0}
+  linkedAssetFail: {fileID: 0}
+  chooseSceneBy: 1
+  sceneToCheck: 1
+  sceneNumberParameterID: -1
+  sceneNumber: 0
+  sceneNameParameterID: -1
+  sceneName: SceneTest
+  intCondition: 0
 --- !u!1 &1765919185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2946,6 +3289,7 @@ Transform:
   m_Children:
   - {fileID: 87875565}
   - {fileID: 1834332826}
+  - {fileID: 688056247}
   m_Father: {fileID: 370826552}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3075,6 +3419,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1905236565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3339a0ba7074d969436b88c517d06f, type: 3}
+  m_Name: ActionInstantiate(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 11
+  title: Add or remove
+  description: Instantiates or deletes GameObjects within the current scene. To ensure
+    this works with save games correctly, place any prefabs to be added in a Resources
+    asset folder.
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 1
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 1
+  skipAction: 2
+  skipActionActual: {fileID: 1905236565}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 14
+    y: 398
+    width: 300
+    height: 122
+  nodeHeight: 0
+  gameObject: {fileID: 479793563}
+  parameterID: -1
+  constantID: 0
+  replaceGameObject: {fileID: 0}
+  replaceParameterID: -1
+  replaceConstantID: 0
+  relativeGameObject: {fileID: 0}
+  relativeGameObjectID: 0
+  relativeGameObjectParameterID: -1
+  invAction: 1
+  positionRelativeTo: 0
 --- !u!1 &1940999359
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,9 +3503,74 @@ Transform:
   m_Children:
   - {fileID: 1256927071}
   - {fileID: 1695136531}
+  - {fileID: 1954023585}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1954023583
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1940999360}
+    m_Modifications:
+    - target: {fileID: 11400000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+      propertyPath: actions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+      propertyPath: m_Name
+      value: 'TransitionLeft: Use'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+      propertyPath: actions.Array.data[0]
+      value: 
+      objectReference: {fileID: 458026249}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1954023584 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11400000, guid: a9d4e17cb5a8745ccad47e11f075de33,
+    type: 2}
+  m_PrefabInternal: {fileID: 1954023583}
+  m_Script: {fileID: 11500000, guid: 6a1e6413216104fd580c7ce85907039c, type: 3}
+--- !u!4 &1954023585 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: a9d4e17cb5a8745ccad47e11f075de33, type: 2}
+  m_PrefabInternal: {fileID: 1954023583}
 --- !u!1 &1981122182
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,62 +3627,6 @@ Transform:
   m_Father: {fileID: 370826552}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2016115018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0643024da91f402a9281e781736a4c6, type: 3}
-  m_Name: ActionCharPathFind(Clone)
-  m_EditorClassIdentifier: 
-  id: 0
-  category: 2
-  title: Move to point
-  description: Moves a character to a given Marker object. By default, the character
-    will attempt to pathfind their way to the marker, but can optionally just move
-    in a straight line.
-  isDisplayed: 1
-  showComment: 0
-  comment: 
-  showOutputSockets: 1
-  numSockets: 1
-  willWait: 0
-  isRunning: 0
-  lastResult:
-    resultAction: 0
-    skipAction: -10
-    skipActionActual: {fileID: 0}
-    linkedCutscene: {fileID: 0}
-    linkedAsset: {fileID: 0}
-  endAction: 1
-  skipAction: -1
-  skipActionActual: {fileID: 0}
-  linkedCutscene: {fileID: 0}
-  linkedAsset: {fileID: 0}
-  isEnabled: 1
-  isAssetFile: 0
-  isMarked: 0
-  isBreakPoint: 0
-  nodeRect:
-    serializedVersion: 2
-    x: 148
-    y: 264
-    width: 300
-    height: 176
-  nodeHeight: 0
-  charToMoveParameterID: -1
-  markerParameterID: -1
-  charToMoveID: 0
-  markerID: 0
-  marker: {fileID: 1443372732}
-  isPlayer: 1
-  charToMove: {fileID: 0}
-  speed: 0
-  pathFind: 1
-  doFloat: 0
 --- !u!1 &2039749520
 GameObject:
   m_ObjectHideFlags: 0
@@ -3246,67 +3656,6 @@ Transform:
   m_Father: {fileID: 671873457}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2082882329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee55ab6fc4c1a4080a3e890703f10e69, type: 3}
-  m_Name: ActionSceneCheck(Clone)
-  m_EditorClassIdentifier: 
-  id: 0
-  category: 14
-  title: Check
-  description: Queries either the current scene, or the last one visited.
-  isDisplayed: 1
-  showComment: 0
-  comment: 
-  showOutputSockets: 1
-  numSockets: 2
-  willWait: 0
-  isRunning: 0
-  lastResult:
-    resultAction: 0
-    skipAction: -10
-    skipActionActual: {fileID: 0}
-    linkedCutscene: {fileID: 0}
-    linkedAsset: {fileID: 0}
-  endAction: 0
-  skipAction: -1
-  skipActionActual: {fileID: 0}
-  linkedCutscene: {fileID: 0}
-  linkedAsset: {fileID: 0}
-  isEnabled: 1
-  isAssetFile: 0
-  isMarked: 0
-  isBreakPoint: 0
-  nodeRect:
-    serializedVersion: 2
-    x: 14
-    y: 14
-    width: 300
-    height: 140
-  nodeHeight: 0
-  resultActionTrue: 0
-  skipActionTrue: -1
-  skipActionTrueActual: {fileID: 0}
-  linkedCutsceneTrue: {fileID: 0}
-  linkedAssetTrue: {fileID: 0}
-  resultActionFail: 1
-  skipActionFail: -1
-  skipActionFailActual: {fileID: 0}
-  linkedCutsceneFail: {fileID: 0}
-  linkedAssetFail: {fileID: 0}
-  chooseSceneBy: 1
-  sceneToCheck: 1
-  sceneNumberParameterID: -1
-  sceneNumber: 0
-  sceneNameParameterID: -1
-  sceneName: SceneTest
-  intCondition: 0
 --- !u!1001 &2100891417
 Prefab:
   m_ObjectHideFlags: 0

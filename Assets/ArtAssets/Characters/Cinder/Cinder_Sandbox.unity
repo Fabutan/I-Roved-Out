@@ -337,7 +337,7 @@ MonoBehaviour:
   rotateSprite3D: 0
   idleAnimSprite: Cinder_idle
   walkAnimSprite: Cinder_walk
-  runAnimSprite: 
+  runAnimSprite: Cinder_run
   talkAnimSprite: 
   lockScale: 0
   spriteScale: 1
@@ -406,7 +406,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 87602337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.11, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 149439815}
@@ -825,7 +825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &176422013
 Transform:
   m_ObjectHideFlags: 0
@@ -2799,7 +2799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &842854407
 Transform:
   m_ObjectHideFlags: 0
@@ -4502,7 +4502,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1429737091}
-  m_LocalRotation: {x: -0, y: -0, z: -0.19602972, w: 0.98059803}
+  m_LocalRotation: {x: -0, y: -0, z: -0.1960297, w: 0.9805979}
   m_LocalPosition: {x: 0.89829123, y: 4.198802, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4713,7 +4713,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1685370681}
-  m_LocalRotation: {x: -0, y: -0, z: 0.85861075, w: 0.5126283}
+  m_LocalRotation: {x: -0, y: -0, z: 0.85861063, w: 0.51262826}
   m_LocalPosition: {x: -0.50986063, y: 7.3178596, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
