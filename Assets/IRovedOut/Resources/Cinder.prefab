@@ -282,16 +282,16 @@ MonoBehaviour:
   spriteDirection: D
   doDirections: 1
   crossfadeAnims: 0
-  doDiagonals: 0
+  doDiagonals: 1
   isTalking: 0
   frameFlipping: 1
   flipCustomAnims: 0
-  walkSpeedScale: 6
-  runSpeedScale: 6
-  turnSpeed: 7
+  walkSpeedScale: 5
+  runSpeedScale: 10
+  turnSpeed: 20
   acceleration: 6
   deceleration: 0
-  turnBeforeWalking: 0
+  turnBeforeWalking: 1
   runDistanceThreshold: 1
   antiGlideMode: 0
   isJumping: 0

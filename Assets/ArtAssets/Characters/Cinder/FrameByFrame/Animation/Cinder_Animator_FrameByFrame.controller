@@ -27,7 +27,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Idle DR
+  m_Name: Cinder_idle_DR
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -50,7 +50,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Run UR
+  m_Name: Cinder_run_UR
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -73,7 +73,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Walk D
+  m_Name: Cinder_walk_D
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -119,7 +119,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Walk UR
+  m_Name: Cinder_walk_UR
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -165,7 +165,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Walk DR
+  m_Name: Cinder_walk_DR
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -188,7 +188,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Run R
+  m_Name: Cinder_run_R
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -211,7 +211,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Idle UR
+  m_Name: Cinder_idle_UR
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -257,7 +257,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Idle U
+  m_Name: Cinder_idle_U
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -280,7 +280,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Run D
+  m_Name: Cinder_run_D
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -303,7 +303,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Idle R
+  m_Name: Cinder_idle_R
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -326,7 +326,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Walk R
+  m_Name: Cinder_walk_R
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -349,7 +349,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Run U
+  m_Name: Cinder_run_U
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -372,7 +372,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Run DR
+  m_Name: Cinder_run_DR
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -395,7 +395,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Walk U
+  m_Name: Cinder_walk_U
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -422,28 +422,28 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102642923741799218}
-    m_Position: {x: 936, y: -36, z: 0}
+    m_Position: {x: 672, y: 252, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102701944858473756}
-    m_Position: {x: 1056, y: 60, z: 0}
+    m_Position: {x: 720, y: 348, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102152889842608926}
-    m_Position: {x: 936, y: 156, z: 0}
+    m_Position: {x: 672, y: 444, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102956645581185180}
-    m_Position: {x: 936, y: 216, z: 0}
+    m_Position: {x: 936, y: 252, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102898129280276462}
-    m_Position: {x: 1056, y: 312, z: 0}
+    m_Position: {x: 984, y: 348, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102058803558971642}
-    m_Position: {x: 936, y: 408, z: 0}
+    m_Position: {x: 936, y: 444, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102202598315045460}
-    m_Position: {x: 1020, y: 264, z: 0}
+    m_Position: {x: 960, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102321125418201222}
-    m_Position: {x: 1020, y: 360, z: 0}
+    m_Position: {x: 960, y: 396, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102266261488373440}
     m_Position: {x: 0, y: 0, z: 0}
@@ -452,25 +452,25 @@ AnimatorStateMachine:
     m_Position: {x: 0, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102007282517862908}
-    m_Position: {x: 1008, y: 108, z: 0}
+    m_Position: {x: 696, y: 396, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102561490248493498}
-    m_Position: {x: 996, y: 12, z: 0}
+    m_Position: {x: 696, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102046681206134410}
-    m_Position: {x: 984, y: 624, z: 0}
+    m_Position: {x: 1224, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102552415892401200}
-    m_Position: {x: 1008, y: 672, z: 0}
+    m_Position: {x: 1248, y: 348, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102943893233919276}
-    m_Position: {x: 984, y: 732, z: 0}
+    m_Position: {x: 1224, y: 396, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102943065517313756}
-    m_Position: {x: 936, y: 576, z: 0}
+    m_Position: {x: 1200, y: 252, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102658967774710596}
-    m_Position: {x: 948, y: 780, z: 0}
+    m_Position: {x: 1200, y: 444, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
