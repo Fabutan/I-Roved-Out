@@ -25,7 +25,7 @@ MonoBehaviour:
   allowSpeechSkipping: 0
   allowGameplaySpeechSkipping: 0
   skipThresholdTime: 0
-  endScrollBeforeSkip: 0
+  endScrollBeforeSkip: 1
   scrollingTextFactorsLength: 0
   searchAudioFiles: 1
   autoNameSpeechFiles: 1
